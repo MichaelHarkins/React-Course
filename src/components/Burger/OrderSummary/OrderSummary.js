@@ -6,11 +6,12 @@ const orderSummary = (props) => {
 
     const ingredientSummary = Object.keys(props.ingredients)
         .map(igKey => {
-            return  (
+            return (
                 <li key={igKey}>
                     <span style={{textTransform: 'capitalize'}}>{igKey}:</span>
                     {props.ingredients[igKey]}
-                    </li>)});
+                </li>)
+        });
     return (
         <Aux>
             <h3>Your Order</h3>

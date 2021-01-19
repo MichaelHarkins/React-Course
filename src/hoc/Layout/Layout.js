@@ -1,4 +1,4 @@
-import React, { Component  } from "react";
+import React, {Component} from "react";
 import Aux from '../Aux/Aux';
 import styles from './Layout.module.css';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
@@ -23,17 +23,17 @@ class Layout extends Component {
         });
     }
 
-    render () {
+    render() {
         return (
-        <Aux>
-            <Toolbar openMenu={this.sideDrawerOpenHandler}/>
-            <SideDrawer
-                open={this.state.showSideDrawer}
-                closed={this.sideDrawerClosedHandler}/>
-            <main className={styles.Content}>
-                {this.props.children}
-            </main>
-        </Aux>
+            <Aux>
+                <Toolbar openMenu={this.sideDrawerOpenHandler}/>
+                <SideDrawer
+                    open={this.state.showSideDrawer}
+                    closed={this.sideDrawerClosedHandler}/>
+                <main className={styles.Content}>
+                    {this.props.children}
+                </main>
+            </Aux>
         );
     }
 }
